@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberLens AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <header class="hero" id="hero">
+
+    <div class="glass hero-card">
+
+      <div class="logo">
+        <div class="logo-circle">C</div>
+      </div>
+
+      <h1>CYBERLENS AI</h1>
+
+      <p class="subtitle">
+        تحلیل هوشمند دستگاه، مرورگر و اتصال شما
+      </p>
+
+      <button id="startScan" class="scan-btn">
+        شروع اسکن
+      </button>
+
+    </div>
+
+  </header>
+
+  <main id="dashboard" class="hidden">
+
+    <section class="scanner glass">
+
+      <h2>وضعیت اسکن</h2>
+
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="progress-text">
+        <span id="progressPercent">0%</span>
+      </div>
+
+      <div id="scanStatus" class="scan-status">
+        آماده شروع...
+      </div>
+
+    </section>
+
+    <section class="cards">
+
+      <div class="glass card">
+        <h3>📱 دستگاه</h3>
+
+        <div class="info-row">
+          <span>پلتفرم</span>
+          <span id="platform">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>مرورگر</span>
+          <span id="browser">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>سیستم عامل</span>
+          <span id="os">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>زبان</span>
+          <span id="language">-</span>
+        </div>
+      </div>
+
+      <div class="glass card">
+        <h3>💻 نمایشگر</h3>
+
+        <div class="info-row">
+          <span>عرض</span>
+          <span id="screenWidth">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>ارتفاع</span>
+          <span id="screenHeight">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>عمق رنگ</span>
+          <span id="colorDepth">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>منطقه زمانی</span>
+          <span id="timezone">-</span>
+        </div>
+      </div>
+
+      <div class="glass card">
+        <h3>🔋 باتری</h3>
+
+        <div class="info-row">
+          <span>درصد شارژ</span>
+          <span id="batteryLevel">در حال دریافت...</span>
+        </div>
+
+        <div class="info-row">
+          <span>وضعیت</span>
+          <span id="batteryStatus">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>صرفه جویی</span>
+          <span id="batterySaving">-</span>
+        </div>
+      </div>
+
+      <div class="glass card">
+        <h3>📡 شبکه</h3>
+
+        <div class="info-row">
+          <span>اتصال</span>
+          <span id="connectionType">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>سرعت</span>
+          <span id="connectionSpeed">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>وضعیت</span>
+          <span id="networkStatus">-</span>
+        </div>
+      </div>
+
+      <div class="glass card wide-card">
+        <h3>📍 موقعیت و زمان</h3>
+
+        <div class="info-row">
+          <span>تاریخ</span>
+          <span id="currentDate">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>ساعت</span>
+          <span id="currentTime">-</span>
+        </div>
+
+        <div class="info-row">
+          <span>مختصات</span>
+          <span id="locationData">اجازه کاربر نیاز است</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="score-section glass">
+
+      <h2>DIGITAL SCORE</h2>
+
+      <div class="score-circle">
+        <span id="scoreNumber">0</span>
+      </div>
+
+      <p class="score-text">
+        امتیاز کلی دستگاه و اتصال شما
+      </p>
+
+    </section>
+
+    <section class="glass ai-analysis">
+
+      <h2>🧠 AI Analysis</h2>
+
+      <div id="analysisText">
+        در انتظار تکمیل اسکن...
+      </div>
+
+    </section>
+
+    <section class="glass security-section">
+
+      <h2>🛡️ Security Status</h2>
+
+      <div class="security-grid">
+
+        <div class="security-item">
+          <span class="dot green"></span>
+          مرورگر فعال
+        </div>
+
+        <div class="security-item">
+          <span class="dot green"></span>
+          اتصال پایدار
+        </div>
+
+        <div class="security-item">
+          <span class="dot green"></span>
+          سیستم در دسترس
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
